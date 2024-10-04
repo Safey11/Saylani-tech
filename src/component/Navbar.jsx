@@ -82,7 +82,7 @@ const Navbar = () => {
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
             <Link to={"/"}>
-              <span className="ml-3 text-xl">Tailblocks</span>
+              <span className="ml-3 text-xl">Saylani Tech</span>
             </Link>
           </div>
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
@@ -90,7 +90,7 @@ const Navbar = () => {
               to="/"
               className={`${
                 location.pathname === "/" ? "text-white bg-indigo-500" : ""
-              } mr-5 hover:text-white hover:bg-indigo-500 px-3 py-2 rounded transition-all duration-300`}
+              } mr-5  px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
             >
               Home
@@ -99,7 +99,7 @@ const Navbar = () => {
               to="/about"
               className={`${
                 location.pathname === "/about" ? "text-white bg-indigo-500" : ""
-              } mr-5 hover:text-white hover:bg-indigo-500 px-3 py-2 rounded transition-all duration-300`}
+              } mr-5  px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -117,7 +117,7 @@ const Navbar = () => {
                   location.pathname.startsWith("/services")
                     ? "text-white bg-indigo-500"
                     : ""
-                } mr-5 hover:text-white hover:bg-indigo-500 px-3 py-2 rounded transition-all duration-300 flex items-center`}
+                } mr-5  px-3 py-2 rounded transition-all duration-300 flex items-center`}
                 onClick={toggleDropdown}
                 data-aos="fade-up"
                 data-aos-delay="200"
@@ -165,21 +165,21 @@ const Navbar = () => {
                       <Link
                         to="/web"
                         onClick={() => handleServiceClick("web development")}
-                        className="block px-3 py-2 text-gray-300 hover:text-indigo-500"
+                        className="block px-3 py-2 text-gray-300 text-sm hover:text-indigo-500"
                       >
                         Web Development
                       </Link>
                       <Link
                         to="/app"
                         onClick={() => handleServiceClick("app development")}
-                        className="block px-3 py-2 text-gray-300 hover:text-indigo-500"
+                        className="block px-3 py-2 text-gray-300 text-sm hover:text-indigo-500"
                       >
                         App Development
                       </Link>
                       <Link
                         to="/ecommerce"
                         onClick={() => handleServiceClick("ecommerce")}
-                        className="block px-3 py-2 text-gray-300 hover:text-indigo-500"
+                        className="block px-3 py-2 text-gray-300 text-sm hover:text-indigo-500"
                       >
                         E-commerce Solutions
                       </Link>
@@ -192,21 +192,21 @@ const Navbar = () => {
                       <Link
                         to="/logo"
                         onClick={() => handleServiceClick("logo design")}
-                        className="block px-3 py-2 text-gray-300 hover:text-indigo-500"
+                        className="block px-3 text-sm py-2 text-gray-300 hover:text-indigo-500"
                       >
                         Logo Design
                       </Link>
                       <Link
                         to="/branding"
                         onClick={() => handleServiceClick("branding")}
-                        className="block px-3 py-2 text-gray-300 hover:text-indigo-500"
+                        className="block px-3 py-2 text-sm text-gray-300 hover:text-indigo-500"
                       >
-                        Branding
+                        <p>Branding</p>
                       </Link>
                       <Link
                         to="/illustration"
                         onClick={() => handleServiceClick("illustration")}
-                        className="block px-3 py-2 text-gray-300 hover:text-indigo-500"
+                        className="block px-3 py-2 text-sm text-gray-300 hover:text-indigo-500"
                       >
                         Illustration
                       </Link>
@@ -220,21 +220,21 @@ const Navbar = () => {
                       <Link
                         to="/softwareengineer"
                         onClick={() => handleServiceClick("seo optimization")}
-                        className="block px-3 py-2 text-gray-300 hover:text-indigo-500"
+                        className="block px-3 text-sm py-2 text-gray-300 hover:text-indigo-500"
                       >
                         Softwar-Eengineer
                       </Link>
                       <Link
                         to="/devops"
                         onClick={() => handleServiceClick("content creation")}
-                        className="block px-3 py-2 text-gray-300 hover:text-indigo-500"
+                        className="block px-3 py-2 text-gray-300 text-sm hover:text-indigo-500"
                       >
                         Devops
                       </Link>
                       <Link
                         to="/qaengineer"
                         onClick={() => handleServiceClick("site audit")}
-                        className="block px-3 py-2 text-gray-300 hover:text-indigo-500"
+                        className="block px-3 py-2 text-gray-300 text-sm hover:text-indigo-500"
                       >
                         Qaengineer
                       </Link>
@@ -250,7 +250,7 @@ const Navbar = () => {
                 location.pathname === "/contact"
                   ? "text-white bg-indigo-500"
                   : ""
-              } mr-5 hover:text-white hover:bg-indigo-500 px-3 py-2 rounded transition-all duration-300`}
+              } mr-5  px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -260,7 +260,7 @@ const Navbar = () => {
               to="/team"
               className={`${
                 location.pathname === "/team" ? "text-white bg-indigo-500" : ""
-              } mr-5 hover:text-white hover:bg-indigo-500 px-3 py-2 rounded transition-all duration-300`}
+              } mr-5  px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -272,7 +272,7 @@ const Navbar = () => {
                 location.pathname === "/portfolio"
                   ? "text-white bg-indigo-500"
                   : ""
-              } mr-5 hover:text-white hover:bg-indigo-500 px-3 py-2 rounded transition-all duration-300`}
+              } mr-5  px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="500"
             >
@@ -284,7 +284,7 @@ const Navbar = () => {
             to="/carear"
             className={`${
               location.pathname === "/carear" ? "text-white bg-indigo-500" : ""
-            } mr-5 hover:text-white hover:bg-indigo-500 px-3 py-2 rounded transition-all duration-300`}
+            } mr-5  px-3 py-2 rounded transition-all duration-300`}
             data-aos="fade-up"
             data-aos-delay="500"
           >
