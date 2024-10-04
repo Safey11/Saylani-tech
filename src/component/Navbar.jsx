@@ -80,7 +80,7 @@ const Navbar = () => {
              
               <Link
                 to="/services"
-                className={`${location.pathname.startsWith('/services') ? 'text-white bg-indigo-500 ' : ''} block md:inline mr-5 hover:text-white hover:bg-indigo-500 px-3 py-2 rounded transition-all duration-300 flex justify-center items-center p-100`}
+                className={`${location.pathname.startsWith('/services') ? 'text-white bg-indigo-500 ' : ''} block md:inline mr-5 hover:text-white hover:bg-indigo-500 px-3 py-2 rounded transition-all duration-300 flex items-center p-100`}
                 onClick={toggleDropdown}
                 data-aos="fade-up" data-aos-delay="200"
               >
