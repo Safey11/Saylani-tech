@@ -55,7 +55,10 @@ const HomeServices = () => {
         <div className="container px-5 mx-auto">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="flex justify-between items-center mb-6">
-              <h2 data-aos="fade-up" className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 drop-shadow-md transition duration-500 hover:scale-105 hover:drop-shadow-lg">
+              <h2
+                data-aos="fade-up"
+                className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 drop-shadow-md transition duration-500 hover:scale-105 hover:drop-shadow-lg"
+              >
                 Our Services
               </h2>
 
@@ -71,7 +74,7 @@ const HomeServices = () => {
 
             <div className="flex flex-wrap -m-4">
               {services.map((service) => (
-                <div className="lg:w-1/3 sm:w-1/2 w-full p-6" key={service.id} data-aos="zoom-in">
+                <div className="lg:w-1/3 sm:w-1/2 w-full p-4" key={service.id} data-aos="zoom-in">
                   <div
                     className="relative bg-white border border-gray-300 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl h-96 cursor-pointer"
                     onClick={() => openModal(service)} // Open modal on click
@@ -112,7 +115,7 @@ const HomeServices = () => {
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           contentLabel="Service Details"
-          className="max-w-md mx-auto bg-white p-5 rounded shadow-lg"
+          className="w-full max-w-sm mx-auto bg-white p-5 rounded shadow-lg max-h-full overflow-auto"
           overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
         >
           <h2 className="text-xl font-bold mb-4">{selectedService.title}</h2>
