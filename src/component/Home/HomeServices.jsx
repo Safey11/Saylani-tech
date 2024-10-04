@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Modal from 'react-modal';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS styles
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import service1 from "../../assets/services1.webp";
+import service2 from "../../assets/services2.webp";
+import Modal from "react-modal";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 // Set the app element for accessibility
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 const HomeServices = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -14,24 +16,25 @@ const HomeServices = () => {
   const services = [
     {
       id: 1,
-      title: 'WEB SERVICES',
-      subtitle: 'WEB SERVICES',
-      description: 'Advantages of Web SERVICES ...',
-      image: 'https://blog.wxperts.com/wp-content/uploads/2016/10/webservices-400x265.jpg',
+      title: "WEB SERVICES",
+      subtitle: "WEB SERVICES",
+      description: "Advantages of Web SERVICES ...",
+      image: service1,
     },
     {
       id: 2,
-      title: 'WEB DEVELOPMENT',
-      subtitle: 'WEB DEVELOPMENT',
-      description: 'Advantages of Web Development ...',
-      image: 'https://miro.medium.com/v2/resize:fit:1400/1*fHrAZJ1_L0Ff9dvVexL5_A.png',
+      title: "WEB DEVELOPMENT",
+      subtitle: "WEB DEVELOPMENT",
+      description: "Advantages of Web Development ...",
+      image: service2,
     },
     {
       id: 3,
-      title: 'APP DEVELOPMENT',
-      subtitle: 'APP DEVELOPMENT',
-      description: 'Advantages of App Development ...',
-      image: 'https://www.perfecto.io/sites/default/files/image/2019-06/image-blog-resolution-and-ppi-affect-test-coverage-600x400.jpg',
+      title: "APP DEVELOPMENT",
+      subtitle: "APP DEVELOPMENT",
+      description: "Advantages of App Development ...",
+      image:
+        "https://www.perfecto.io/sites/default/files/image/2019-06/image-blog-resolution-and-ppi-affect-test-coverage-600x400.jpg",
     },
   ];
 
@@ -74,7 +77,11 @@ const HomeServices = () => {
 
             <div className="flex flex-wrap -m-4">
               {services.map((service) => (
-                <div className="lg:w-1/3 sm:w-1/2 w-full p-4" key={service.id} data-aos="zoom-in">
+                <div
+                  className="lg:w-1/3 sm:w-1/2 w-full p-4"
+                  key={service.id}
+                  data-aos="zoom-in"
+                >
                   <div
                     className="relative bg-white border border-gray-300 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl h-96 cursor-pointer"
                     onClick={() => openModal(service)} // Open modal on click
@@ -124,7 +131,9 @@ const HomeServices = () => {
             className="w-full h-48 object-cover object-center mb-4 rounded"
             src={selectedService.image}
           />
-          <h3 className="text-lg font-semibold mb-2">{selectedService.subtitle}</h3>
+          <h3 className="text-lg font-semibold mb-2">
+            {selectedService.subtitle}
+          </h3>
           <p className="mb-4">{selectedService.description}</p>
           <button
             onClick={closeModal}
