@@ -8,8 +8,8 @@ const Navbar = () => {
   const location = useLocation();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [imageUrl, setImageUrl] = useState(
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN5XaPknTWTxdBcdC3r0_9blSi_8n3rD_2Xg&s"
-  ); // Default image
+    "https://th.bing.com/th/id/OIP._z7zYMDurI56otX5togX6QAAAA?w=269&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+  );
 
   const UNSPLASH_API_KEY = "OC1nfXOHm-yk-XWGO05G01ai4-1z_RE_RTrZSBcDCdU";
 
@@ -212,7 +212,6 @@ const Navbar = () => {
                       </Link>
                     </div>
 
-                    {/* New SEO Optimization Column */}
                     <div>
                       <h3 className="text-white text-lg mb-2">
                         SEO Optimization
@@ -222,21 +221,21 @@ const Navbar = () => {
                         onClick={() => handleServiceClick("seo optimization")}
                         className="block px-3 text-sm py-2 text-gray-300 hover:text-indigo-500"
                       >
-                        Softwar-Eengineer
+                        Software Engineer
                       </Link>
                       <Link
                         to="/devops"
                         onClick={() => handleServiceClick("content creation")}
                         className="block px-3 py-2 text-gray-300 text-sm hover:text-indigo-500"
                       >
-                        Devops
+                        DevOps
                       </Link>
                       <Link
                         to="/qaengineer"
                         onClick={() => handleServiceClick("site audit")}
                         className="block px-3 py-2 text-gray-300 text-sm hover:text-indigo-500"
                       >
-                        Qaengineer
+                        QA Engineer
                       </Link>
                     </div>
                   </div>
@@ -288,7 +287,7 @@ const Navbar = () => {
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            Carear
+            Career
           </Link>
 
           <Link to="/contact">
