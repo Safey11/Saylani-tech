@@ -177,7 +177,7 @@ const Navbar = () => {
                         App Development
                       </Link>
                       <Link
-                        to="/ecommerce"
+                        to="/Apiintegraton"
                         onClick={() => handleServiceClick("ecommerce")}
                         className="block px-3 py-2 text-gray-300 text-sm hover:text-indigo-500"
                       >
