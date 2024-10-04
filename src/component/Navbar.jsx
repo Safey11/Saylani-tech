@@ -181,7 +181,7 @@ const Navbar = () => {
                         onClick={() => handleServiceClick("ecommerce")}
                         className="block px-3 py-2 text-gray-300 text-sm hover:text-indigo-500"
                       >
-                        E-commerce Solutions
+                        API Development and Integration
                       </Link>
                     </div>
 
