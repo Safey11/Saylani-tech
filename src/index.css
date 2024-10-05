@@ -26,4 +26,34 @@
 
   
   
-  
+  /* Add this to your stylesheet */
+
+@media only screen and (max-width: 768px) {
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .fixed {
+    position: fixed;
+    top: 60px; /* adjust this value to match your navbar height */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
