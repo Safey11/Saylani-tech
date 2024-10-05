@@ -303,7 +303,7 @@ const Navbar = () => {
               Portfolio
             </Link>
             <Link
-              to="/career"
+              to="/carear"
               className={`${
                 location.pathname === "/career"
                   ? "text-white bg-indigo-500"
@@ -312,7 +312,7 @@ const Navbar = () => {
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              Career
+              Carear
             </Link>
             <Link to="/contact">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-500 transform hover:scale-105 transition duration-300 ease-in-out">
