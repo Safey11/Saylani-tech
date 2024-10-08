@@ -5,7 +5,7 @@ const ContactUsed = () => {
     <div>
       <section className="text-gray-400 bg-gray-900 body-font">
         <div className="container mx-auto px-4 py-16">
-          <h2 className="text-center text-3xl font-bold bg-clip-text text-red mb-8">
+          <h2 className="text-center text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ca464a] to-[#4d163d] mb-8">
             Our Achievements
           </h2>
           <div className="flex flex-wrap justify-center -m-4 text-center">

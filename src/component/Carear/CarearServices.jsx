@@ -49,7 +49,7 @@ const CareerServices = () => {
 
   return (
     <>
-      <section className="bg-gradient-to-r from-blue-900 to-gray-900 py-16 relative">
+      <section className="bg-gradient-to-r from-[#4d153a] to-[#000000] py-16 relative">
         {/* Add subtle background pattern */}
         <div className="absolute inset-0 bg-pattern opacity-10"></div>
         <div className="container px-5 mx-auto relative z-10">
@@ -64,7 +64,7 @@ const CareerServices = () => {
                 className="p-4 lg:w-1/4 md:w-1/2 w-full"
                 data-aos="fade-up"
               >
-                <div className="relative bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg shadow-xl hover:shadow-2xl transform transition duration-500 hover:scale-105 h-80 flex flex-col">
+                <div className="relative bg-gradient-to-r from-[#4d153a] to-[#7a2c48] rounded-lg shadow-xl hover:shadow-2xl transform transition duration-500 hover:scale-105 h-80 flex flex-col">
                   {/* Add gradient overlay to image */}
                   <div className="relative h-40">
                     <img
