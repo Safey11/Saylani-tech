@@ -32,7 +32,7 @@ const ServicesBar = () => {
           <h1 className="text-5xl font-extrabold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-red-950 via-red-500 to-red-700">
             Our Professional Services
           </h1>
-          <p className="mb-8 leading-relaxed text-white text-red-700">
+          <p className="mb-8 leading-relaxed text-red-700">
             We offer a wide range of services tailored to help businesses
             succeed in the digital world, including web development, mobile app
             development, and cloud solutions. Our team is dedicated to
