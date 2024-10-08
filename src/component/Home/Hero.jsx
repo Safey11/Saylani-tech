@@ -54,7 +54,7 @@ function AppHero() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-900 via-indigo-900 to-gray-900  py-12">
+    <div className="bg-gradient-to-r from-[#4d193d] via--[#9f6e8f] to-[#4d193d] py-12">
       {" "}
       {/* Added Background Color */}
       <div

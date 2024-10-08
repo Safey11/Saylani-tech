@@ -4,10 +4,7 @@ import Aos from "aos";
 
 const AppWork = () => {
   return (
-    <section
-      className="bg-gradient-to-r from-indigo-600 to-purple-700 py-20"
-      data-aos={"fade-in"}
-    >
+    <section className="bg-gray-100 py-20" data-aos={"fade-in"}>
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-center items-center">
           <img
@@ -16,10 +13,10 @@ const AppWork = () => {
             className="object-cover rounded-lg shadow-2xl transform transition duration-500 hover:scale-105 md:w-1/2"
           />
           <div className="md:pl-10 mt-8 md:mt-0">
-            <h1 className="text-4xl font-extrabold text-white mb-6">
+            <h1 className="text-4xl font-extrabold text-[#ce474c] mb-6">
               Build Fast, Reliable, and High-Quality Websites
             </h1>
-            <p className="text-lg text-gray-200 mb-8">
+            <p className="text-lg text-black mb-8">
               I specialize in creating websites that not only look stunning but
               also perform seamlessly. Here's what I offer:
             </p>
@@ -58,7 +55,7 @@ const AppWork = () => {
                       alt={`${item.title} Icon`}
                       className="w-8 h-8 mr-2 transition duration-300 transform hover:scale-110"
                     />
-                    <h2 className="font-semibold text-xl text-gray-800">
+                    <h2 className="font-semibold text-xl text-[#ce474c]">
                       {item.title}
                     </h2>
                   </div>
@@ -69,7 +66,7 @@ const AppWork = () => {
             {/* Attractive Button */}
             <div className="mt-8">
               <Link to={"/portfolio"}>
-                <button className="inline-flex items-center justify-center px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow-md hover:bg-indigo-500 hover:text-white transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-300">
+                <button className="inline-flex items-center justify-center px-6 py-3 bg-[#ce474c] text-white font-semibold rounded-lg shadow-md hover:bg-indigo-500 hover:text-white transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-300">
                   Visit Our Portfolio
                 </button>
               </Link>

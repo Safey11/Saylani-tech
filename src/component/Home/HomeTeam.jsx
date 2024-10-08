@@ -88,50 +88,36 @@ const TeamSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-gray-800 to-indigo-800 py-14 mt-14">
+    <section className="bg-gradient-to-r from-[#4d193d] via--[#9f6e8f] to-[#4d193d] py-14 mt-14">
       <div className="container mx-auto text-center">
-        <h2
-          className="text-4xl font-bold text-white mb-10"
-          data-aos="fade-down"
-        >
+        <h2 className="text-4xl font-bold text-white mb-10" data-aos="fade-up">
           Meet Our Team
         </h2>
         <Slider {...settings}>
           {teamMembers.map((member) => (
-            <div key={member.id} className="flex justify-center">
-              <div
-                className="bg-black shadow-2xl border border-indigo-500 transform transition duration-500 hover:scale-105 hover:shadow-indigo-600 rounded-lg p-5 mx-5"
-                data-aos="flip-left"
-              >
+            <div
+              key={member.id}
+              className="flex justify-center"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <div className="bg-white shadow-2xl border border-indigo-500 transform transition duration-500 hover:scale-105 hover:shadow-indigo-600 rounded-lg p-5 mx-5">
                 <center>
                   <figure className="mr-5">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="object-cover h-24 w-24 rounded-full border-4 border-indigo-500 shadow-lg"
-                      data-aos="zoom-in"
+                      className="object-cover h-24 w-24 rounded-full border-4 border-[#ce474c] shadow-lg"
                     />
                   </figure>
                 </center>
-
                 <br />
-
                 <div className="cards-body">
-                  <h3
-                    className="cards-title text-2xl font-semibold text-white mb-1"
-                    data-aos="fade-right"
-                  >
+                  <h3 className="cards-title text-2xl font-semibold text-[#ce474c] mb-1">
                     {member.name}
                   </h3>
-                  <h4
-                    className="text-lg text-gray-300 mb-2"
-                    data-aos="fade-left"
-                  >
-                    {member.position}
-                  </h4>
-                  <p className="text-gray-200" data-aos="fade-up">
-                    {member.description}
-                  </p>
+                  <h4 className="text-lg text-black mb-2">{member.position}</h4>
+                  <p className="text-black text-sm">{member.description}</p>
                 </div>
               </div>
             </div>

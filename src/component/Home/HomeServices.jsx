@@ -60,14 +60,14 @@ const HomeServices = () => {
             <div className="flex flex-col md:flex-row justify-between items-center mb-6">
               <h2
                 data-aos="fade-up"
-                className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 drop-shadow-md transition duration-500 hover:scale-105 hover:drop-shadow-lg mb-4 md:mb-0"
+                className="text-4xl font-extrabold bg-clip-text text-red drop-shadow-md transition duration-500 hover:scale-105 hover:drop-shadow-lg mb-4 md:mb-0"
               >
                 Our Services
               </h2>
 
               <Link
                 to="/services"
-                className="relative bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:from-pink-500 hover:to-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-400"
+                className="relative bg-red text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-400"
                 data-aos="fade-down" // Animation for the button
               >
                 <span className="relative z-10">View All Services</span>
@@ -92,10 +92,10 @@ const HomeServices = () => {
                       src={service.image}
                     />
                     <div className="absolute inset-0 bg-white bg-opacity-0 flex flex-col justify-center items-center transition-opacity duration-300 opacity-0 hover:bg-opacity-90 hover:opacity-100 p-6">
-                      <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">
+                      <h2 className="tracking-widest text-xs title-font font-medium text-red mb-1">
                         {service.subtitle}
                       </h2>
-                      <h1 className="title-font text-xl font-semibold text-gray-900 mb-2">
+                      <h1 className="title-font text-xl font-semibold text-purple mb-2">
                         {service.title}
                       </h1>
                       <p className="leading-relaxed mb-2 text-center text-sm">
@@ -103,7 +103,7 @@ const HomeServices = () => {
                       </p>
                       <Link
                         to="/services"
-                        className="text-indigo-500 inline-flex items-center hover:text-indigo-700 transition duration-300 ease-in-out"
+                        className="text-red  transition duration-300 ease-in-out"
                       >
                         Learn More
                       </Link>
@@ -131,13 +131,13 @@ const HomeServices = () => {
             className="w-full h-48 object-cover object-center mb-4 rounded"
             src={selectedService.image}
           />
-          <h3 className="text-lg font-semibold mb-2">
+          <h3 className="text-lg text-red font-semibold mb-2">
             {selectedService.subtitle}
           </h3>
           <p className="mb-4">{selectedService.description}</p>
           <button
             onClick={closeModal}
-            className="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition duration-200"
+            className="bg-indigo-500 text-red px-4 py-2 rounded hover:bg-indigo-600 transition duration-200"
           >
             Close
           </button>

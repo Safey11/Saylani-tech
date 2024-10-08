@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS styles
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const reviews = [
   {
@@ -9,29 +9,29 @@ const reviews = [
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 5,
     review: "Absolutely fantastic service! Highly recommended.",
-    date: "September 12, 2024"
+    date: "September 12, 2024",
   },
   {
     name: "Jane Smith",
     avatar: "https://randomuser.me/api/portraits/women/44.jpg",
     rating: 4,
     review: "Great experience, but there's room for improvement.",
-    date: "August 23, 2024"
+    date: "August 23, 2024",
   },
   {
     name: "Michael Lee",
     avatar: "https://randomuser.me/api/portraits/men/77.jpg",
     rating: 5,
     review: "Exceptional quality and support. Will use again!",
-    date: "July 5, 2024"
+    date: "July 5, 2024",
   },
   {
     name: "Sarah Brown",
     avatar: "https://randomuser.me/api/portraits/women/68.jpg",
     rating: 4,
     review: "Loved the experience. Would recommend to anyone.",
-    date: "June 16, 2024"
-  }
+    date: "June 16, 2024",
+  },
 ];
 
 function StarRating({ rating }) {
@@ -59,9 +59,9 @@ export default function AppReview() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-gray-900 via-indigo-900 to-gray-900 py-20">
+    <div className="bg-gray-100 py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        <h2 className="text-5xl font-extrabold text-center mb-12 text-transparent text-[#ce474c]">
           What Our Users Say
         </h2>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -76,22 +76,22 @@ export default function AppReview() {
                 src={review.avatar}
                 alt={`${review.name}'s avatar`}
                 className={`h-16 w-16 rounded-full object-cover border-4 ${
-                  review.rating === 5 ? "border-yellow-400" : "border-indigo-500"
+                  review.rating === 5
+                    ? "border-yellow-400"
+                    : "border-indigo-500"
                 } shadow-sm mx-auto`}
               />
               <StarRating rating={review.rating} />
               <div className="mt-3">
-                <h3 className="text-lg font-semibold text-gray-800">
+                <h3 className="text-lg font-semibold text-[#ce474c]">
                   {review.name}
                 </h3>
                 <p className="text-sm text-gray-500">{review.date}</p>
-                <p className="mt-2 text-gray-600 text-sm">
-                  "{review.review}"
-                </p>
+                <p className="mt-2 text-gray-600 text-sm">"{review.review}"</p>
               </div>
               <div className="mt-4">
-                <Link to={'/team'}>
-                  <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 text-sm rounded-full shadow-md transition-transform duration-200 transform hover:scale-105">
+                <Link to={"/team"}>
+                  <button className="w-full bg-[#ce474c] hover:bg-[#df585d] text-white py-2 px-4 text-sm rounded-full shadow-md transition-transform duration-200 transform hover:scale-105">
                     Read More
                   </button>
                 </Link>

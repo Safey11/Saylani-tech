@@ -39,11 +39,13 @@ const Navbar = () => {
           : "https://via.placeholder.com/300x200?text=No+Image+Found"
       );
 
-      dispatch(setImgUrl(response.data.results.length > 0
-        ? response.data.results[0].urls.small
-        : "https://via.placeholder.com/300x200?text=No+Image+Found"
-      ));
-
+      dispatch(
+        setImgUrl(
+          response.data.results.length > 0
+            ? response.data.results[0].urls.small
+            : "https://via.placeholder.com/300x200?text=No+Image+Found"
+        )
+      );
     } catch (error) {
       console.error("Error fetching image:", error);
       setImageUrl("https://via.placeholder.com/300x200?text=Error");
@@ -59,21 +61,14 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-0 z-50 bg-white">
-      <header
-        className="text-gray-400 body-font"
-        data-aos="fade-down"
-      >
+      <header className="text-gray-400 body-font" data-aos="fade-down">
         <div className="container mx-auto flex flex-wrap p-5 items-center justify-between">
           <div
             className="flex title-font font-medium items-center text-white"
             data-aos="fade-right"
           >
             <Link to={"/"}>
-              <img
-                src="/logo-1.png"
-                alt="Logo"
-                className={`h-12`}
-              />
+              <img src="/logo-1.png" alt="Logo" className={`h-12`} />
             </Link>
           </div>
 
@@ -98,23 +93,26 @@ const Navbar = () => {
           </button>
 
           <nav
-            className={`md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center ${isMobileMenuOpen
-              ? "flex flex-col absolute top-16 left-0 w-full bg-gray-900 p-5 z-40"
-              : "hidden md:flex"
-              }`}
+            className={`md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center ${
+              isMobileMenuOpen
+                ? "flex flex-col absolute top-16 left-0 w-full bg-gray-900 p-5 z-40"
+                : "hidden md:flex"
+            }`}
           >
             <Link
               to="/"
-              className={`${location.pathname === "/" ? "text-white bg-red" : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+              className={`${
+                location.pathname === "/" ? "text-white bg-red" : ""
+              } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className={`${location.pathname === "/about" ? "text-white bg-red" : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+              className={`${
+                location.pathname === "/about" ? "text-white bg-red" : ""
+              } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -263,10 +261,9 @@ const Navbar = () => {
 
             <Link
               to="/contact"
-              className={`${location.pathname === "/contact"
-                ? "text-white bg-red"
-                : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+              className={`${
+                location.pathname === "/contact" ? "text-white bg-red" : ""
+              } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -274,8 +271,9 @@ const Navbar = () => {
             </Link>
             <Link
               to="/team"
-              className={`${location.pathname === "/team" ? "text-white bg-red" : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+              className={`${
+                location.pathname === "/team" ? "text-white bg-red" : ""
+              } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -283,10 +281,9 @@ const Navbar = () => {
             </Link>
             <Link
               to="/portfolio"
-              className={`${location.pathname === "/portfolio"
-                ? "text-white bg-red"
-                : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+              className={`${
+                location.pathname === "/portfolio" ? "text-white bg-red" : ""
+              } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="500"
             >
@@ -294,17 +291,16 @@ const Navbar = () => {
             </Link>
             <Link
               to="/career"
-              className={`${location.pathname === "/career"
-                ? "text-white bg-red"
-                : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+              className={`${
+                location.pathname === "/career" ? "text-white bg-red" : ""
+              } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="500"
             >
               Career
             </Link>
             <Link to="/contact">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-500 transform hover:scale-105 transition duration-300 ease-in-out">
+              <button className="bg-gradient-to-r from-red to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:from-red-500 hover:to-purple-500 transform hover:scale-105 transition duration-300 ease-in-out">
                 GET TICKET ➡
               </button>
             </Link>
