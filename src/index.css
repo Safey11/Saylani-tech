@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* #heading  {
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 1px;
+} */
 /* Reset default browser styles */
 * {
     margin: 0;
