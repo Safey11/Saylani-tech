@@ -5,7 +5,7 @@ import Earth from '../../assets/Earth.json';
 const CarearJoin = () => {
   return (
     <div>
-      <section className="text-gray-400 bg-gradient-to-r from-blue-900 via-purple-900 to-black body-font relative overflow-hidden">
+      <section className="text-gray-400 bg-gradient-to-r from-[#ca464a] to-[#4d163d] body-font relative overflow-hidden">
         {/* Add subtle background pattern */}
         <div className="absolute inset-0 bg-pattern opacity-20"></div>
 
