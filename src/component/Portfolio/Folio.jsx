@@ -20,7 +20,7 @@ const AppPortFolio = () => {
         },
         {
             title: "TO-DO APP",
-            description: "To-Do App where you can list your daily tasks .",
+            description: "To-Do App where you can list your daily tasks.",
         },
         {
             title: "PAYMENT METHOD",
@@ -32,7 +32,7 @@ const AppPortFolio = () => {
         },
         {
             title: "ARCADE GAME",
-            description: "A Arcade Game to enjoy online with friends.",
+            description: "An Arcade Game to enjoy online with friends.",
         },
         {
             title: "FLYING CARS",
@@ -42,7 +42,7 @@ const AppPortFolio = () => {
 
     return (
         <>
-            <section className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-10">
+            <section className="bg-gradient-to-r from-[#ca464a] to-[#4d163d] py-10">
                 <div className="container px-5 mx-auto">
                     {/* Centered heading */}
                     <h2 className="text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 drop-shadow-md transition duration-500 hover:scale-105 hover:drop-shadow-lg mb-10">
@@ -53,7 +53,7 @@ const AppPortFolio = () => {
                         {/* Card 1 */}
                         {Array.from({ length: images.length }).map((_, index) => (
                             <div className="w-full sm:w-1/2 lg:w-1/3 p-2" key={`portfolio-item-${index}`}>
-                                <div className="relative bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border border-gray-300 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl h-64 group">
+                                <div className="relative bg-gradient-to-r from-[#ca464a] to-[#4d163d] border border-gray-300 shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl h-64 group">
                                     <img
                                         alt={projects[index].title} // Using custom project title for alt text
                                         className="w-full h-full object-cover object-center transition duration-300 group-hover:scale-110"
@@ -61,7 +61,7 @@ const AppPortFolio = () => {
                                         loading="lazy" // Lazy loading for images
                                     />
                                     <div className="absolute inset-0 bg-white bg-opacity-0 flex flex-col justify-center items-center transition-opacity duration-300 opacity-0 group-hover:bg-opacity-90 group-hover:opacity-100 p-6">
-                                        <h2 className="tracking-widest text-lg md:text-xl lg:text-2xl font-bold text-indigo-600 mb-1">
+                                        <h2 className="tracking-widest text-lg md:text-xl lg:text-2xl font-bold text-[#4d163d] mb-1">
                                             {projects[index].title} {/* Custom project title with larger font size */}
                                         </h2>
                                         <p className="leading-relaxed mb-2 text-center text-sm">
@@ -69,7 +69,7 @@ const AppPortFolio = () => {
                                         </p>
                                         <Link
                                             to="/details"
-                                            className="text-indigo-500 inline-flex items-center hover:text-indigo-700 transition duration-300 ease-in-out"
+                                            className="text-[#ca464a] inline-flex items-center hover:text-[#4d163d] transition duration-300 ease-in-out"
                                         >
                                             Learn More
                                             <svg

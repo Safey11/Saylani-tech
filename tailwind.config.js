@@ -8,6 +8,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    colors: {
+      'red': '#CA454A',
+      'purpleColor': '#4C133A'
+    },
     extend: {
       animation: {
         first: "moveVertical 30s ease infinite",

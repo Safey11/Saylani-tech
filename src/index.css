@@ -2,35 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* #heading  {
-  -webkit-text-fill-color: black;
-  -webkit-text-stroke-width: 1px;
-} */
-/* Reset default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    font-size:large;
-    box-sizing: border-box;
-    font-family: sans-serif !important;
-    text-decoration: none !important; /* Removes underline from links by default */
-  }
 
-  /* Add this CSS to your styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: large;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-decoration: none !important;
+}
+
 .sponsor-container {
   display: flex;
   overflow: hidden;
-  white-space: nowrap; /* Prevent line breaks */
+  white-space: nowrap;
 }
 
 .sponsor {
   display: inline-block;
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  transition: transform 0.3s ease-in-out;
 }
-
-  
-  
-  /* Add this to your stylesheet */
 
 @media only screen and (max-width: 768px) {
   .sticky {
@@ -42,7 +34,7 @@
 
   .fixed {
     position: fixed;
-    top: 60px; /* adjust this value to match your navbar height */
+    top: 60px;
     left: 0;
     width: 100%;
     z-index: 1000;
@@ -56,6 +48,7 @@
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }

@@ -67,10 +67,10 @@ const TeamMembers = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-r from-gray-900 via-indigo-900 to-gray-900 text-gray-400 py-24">
+    <section className="bg-gradient-to-r from-[#4d163d] via-[#ca464a] to-[#4d163d] text-white py-24">
       <div className="container px-5 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+          <h1 className="text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#ca464a] via-[#4d163d] to-[#ca464a]">
             OUR Special Members
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
@@ -80,19 +80,18 @@ const TeamMembers = () => {
         <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {teamMembers.map((member) => (
             <div className="p-2" data-aos="fade-up" data-aos-delay={member.delay} key={member.name}>
-              <div className="h-full flex flex-col items-center text-center bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl relative">
+              <div className="h-full flex flex-col items-center text-center bg-white text-black rounded-lg shadow-md overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl relative">
                 <img
                   alt={member.name}
                   className="flex-shrink-0 rounded-lg w-full h-40 object-cover object-center mb-2"
                   src={member.img}
                 />
                 <div className="w-full p-3">
-                  <h2 className="title-font font-medium text-lg text-indigo-600">{member.name}</h2>
-                  <h3 className="text-gray-600 mb-2 text-sm">{member.role}</h3>
+                  <h2 className="title-font font-medium text-lg text-[#ca464a]">{member.name}</h2>
+                  <h3 className="text-[#4d163d] mb-2 text-sm">{member.role}</h3>
                   <p className="mb-4 text-gray-600 text-xs">{member.description}</p>
                 </div>
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 hover:opacity-30 rounded-lg transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#ca464a] via-[#4d163d] to-[#ca464a] opacity-0 hover:opacity-30 rounded-lg transition-opacity duration-300"></div>
               </div>
             </div>
           ))}

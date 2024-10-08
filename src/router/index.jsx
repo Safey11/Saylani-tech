@@ -50,7 +50,7 @@ const AppRouter = () => {
           <Route path="seo" element={<Seo />} />
           <Route path="socialmedia" element={<SocialMedia />} />
           <Route path="googleAds" element={<GoogleAds />} />
-          <Route path="carear" element={<Carear />} />
+          <Route path="career" element={<Carear />} />
           <Route path="jobletter" element={<JobLetter />} />
 
           <Route path="uidesigner" element={<UIdesigner />} />
