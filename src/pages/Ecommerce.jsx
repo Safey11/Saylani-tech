@@ -8,11 +8,11 @@ const ApiDevelopment = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 min-h-screen py-10">
+    <div className="bg-black min-h-screen py-20">
       <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-10">
         {/* Header */}
         <h1
-          className="text-5xl font-bold text-center text-green-600 mb-8"
+          className="text-5xl font-bold text-center text-[#ce474c] mb-8"
           data-aos="fade-up"
         >
           API Development and Integration
@@ -72,7 +72,7 @@ const ApiDevelopment = () => {
 
         {/* Call-to-action */}
         <div className="text-center mt-10" data-aos="zoom-in">
-          <button className="bg-green-600 text-white text-lg font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300">
+          <button className="bg-[#ce474c] text-white text-lg font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300">
             Get Started with API Development
           </button>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import HomeServices from "../component/Home/HomeServices";
 import AppHero from "../component/Home/Hero";
 import AppReview from "../component/Home/Review";
-
+import Sponsors from "../component/Sponsers.jsx";
 import WhatWeWorkOn from "../component/Home/skills";
 import AppWork from "../component/Home/work";
 import HomeTeam from "../component/Home/HomeTeam";
@@ -22,6 +22,9 @@ const Home = () => {
       </div>
       <div>
         <AppWork />
+      </div>
+      <div>
+        <Sponsors />
       </div>
       <div>
         <HomeTeam />

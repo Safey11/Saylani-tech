@@ -11,13 +11,13 @@ const ServicesHelp = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white p-4">
       <h1
-        className="text-4xl font-bold mb-4 text-red"
+        className="text-4xl font-bold mb-4 text-red-800"
         data-aos="fade-up" // AOS animation for the heading
       >
         How Can We Help You?
       </h1>
       <p
-        className="text-lg text-red mb-6 text-center max-w-md"
+        className="text-lg text-red-500 mb-6 text-center max-w-md"
         data-aos="fade-up"
         data-aos-delay="200" // Add delay to make the animation more dynamic
       >
@@ -27,7 +27,7 @@ const ServicesHelp = () => {
 
       <Link to={"/contact"}>
         <button
-          className="bg-gradient-to-r from-red via-red-500 to-red text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 hover:white"
+          className="bg-gradient-to-r from-red-950 via-red-500 to-red-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 hover:white"
           data-aos="zoom-in" // AOS animation for the button
           data-aos-delay="400"
         >

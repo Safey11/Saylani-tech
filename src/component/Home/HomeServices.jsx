@@ -60,14 +60,14 @@ const HomeServices = () => {
             <div className="flex flex-col md:flex-row justify-between items-center mb-6">
               <h2
                 data-aos="fade-up"
-                className="text-4xl font-extrabold bg-clip-text text-red drop-shadow-md transition duration-500 hover:scale-105 hover:drop-shadow-lg mb-4 md:mb-0"
+                className="text-4xl font-extrabold bg-clip-text text-red-900 drop-shadow-md transition duration-500 hover:scale-105 hover:drop-shadow-lg mb-4 md:mb-0"
               >
                 Our Services
               </h2>
 
               <Link
                 to="/services"
-                className="relative bg-red text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-400"
+                className="relative bg-red-900 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-400"
                 data-aos="fade-down" // Animation for the button
               >
                 <span className="relative z-10">View All Services</span>
@@ -95,7 +95,7 @@ const HomeServices = () => {
                       <h2 className="tracking-widest text-xs title-font font-medium text-red mb-1">
                         {service.subtitle}
                       </h2>
-                      <h1 className="title-font text-xl font-semibold text-purple mb-2">
+                      <h1 className="title-font text-xl font-semibold text-red-700 mb-2">
                         {service.title}
                       </h1>
                       <p className="leading-relaxed mb-2 text-center text-sm">
@@ -103,7 +103,7 @@ const HomeServices = () => {
                       </p>
                       <Link
                         to="/services"
-                        className="text-red  transition duration-300 ease-in-out"
+                        className="text-red-700  transition duration-300 ease-in-out"
                       >
                         Learn More
                       </Link>

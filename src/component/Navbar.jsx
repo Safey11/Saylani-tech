@@ -64,13 +64,25 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 600) {
+      const currentScrollPos = window.scrollY;
+
+      // Handling transparency
+      if (currentScrollPos > 600) {
         setIsTransparent(false);
         dispatch(setTransparent(false));
       } else {
         setIsTransparent(true);
         dispatch(setTransparent(true));
       }
+
+      // Handling visibility
+      if (currentScrollPos > prevScrollPos) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -78,7 +90,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [prevScrollPos, dispatch]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -359,7 +371,7 @@ const Navbar = () => {
               Career
             </Link>
             <Link to="/contact">
-              <button className="bg-gradient-to-r bg-red text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-red/90 transform hover:scale-105 transition ease-in-out">
+              <button className="bg-gradient-to-r bg-red text-red font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-red/90 transform hover:scale-105 transition ease-in-out">
                 GET TICKET ➡
               </button>
             </Link>

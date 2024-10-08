@@ -203,18 +203,18 @@ const Services = () => {
         <div className="flex justify-between gap-4">
           <div className="md:block hidden">
             <div className="my-2 hover:bg-gray-100 p-2 rounded cursor-pointer">
-              <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-red">
-                IT Park
+              <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-black">
+                Zaitoon Ashraf
               </h3>
               <h4 className="text-black hover:text-purpleColor/90 text-[12px] md:text-[14px] font-medium">
-                Zaitoon Ashraf IT Park
+                IT Park
               </h4>
             </div>
             <img src={imgUrl} alt="IT Park" className="w-60 rounded-lg" />
           </div>
           <hr className="h-64 m-auto border-l border-t-0 border-gray-200 md:block hidden" />
           <div>
-            <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-red">
+            <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-red-600">
               Web & App Development
             </h3>
             {webDevelopment?.length > 0 ? (
@@ -234,7 +234,7 @@ const Services = () => {
             )}
           </div>
           <div>
-            <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-red">
+            <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-red-600">
               Graphic Designing
             </h3>
             {graphicDesigning?.length > 0 ? (
@@ -254,7 +254,7 @@ const Services = () => {
             )}
           </div>
           <div>
-            <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-red">
+            <h3 className="mb-2 text-[14px] md:text-[16px] font-medium text-red-600">
               SEO Optimization
             </h3>
             {SEOOptimization?.length > 0 ? (
@@ -275,7 +275,7 @@ const Services = () => {
           </div>
         </div>
         <Link to={`/services`} className="flex justify-end items-center">
-          <p className="px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-100 text-red flex items-center justify-end">
+          <p className="px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-100 text-red-600 flex items-center justify-end">
             See All <FiArrowRight />
           </p>
         </Link>

@@ -29,10 +29,10 @@ const ServicesBar = () => {
           className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
           data-aos="fade-left"
         >
-          <h1 className="text-5xl font-extrabold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+          <h1 className="text-5xl font-extrabold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-red-950 via-red-500 to-red-700">
             Our Professional Services
           </h1>
-          <p className="mb-8 leading-relaxed text-white">
+          <p className="mb-8 leading-relaxed text-white text-red-700">
             We offer a wide range of services tailored to help businesses
             succeed in the digital world, including web development, mobile app
             development, and cloud solutions. Our team is dedicated to
@@ -42,7 +42,7 @@ const ServicesBar = () => {
 
           <Link to={"/contact"}>
             <div className="flex justify-center">
-              <button className="inline-flex text-white bg-red border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              <button className="inline-flex text-red bg-red-700 border-0 py-2 px-6 focus:outline-red hover:bg-white rounded text-lg">
                 Contact Us
               </button>
             </div>

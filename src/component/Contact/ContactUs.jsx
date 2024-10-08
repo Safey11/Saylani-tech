@@ -62,7 +62,7 @@ const GetTicket = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center">
           {/* Left Side - Text Section */}
           <div className="lg:w-1/2 w-full mb-12 lg:mb-0 text-left lg:pr-12">
-            <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-red drop-shadow-lg">
+            <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-red-500 drop-shadow-lg">
               For Contact Get Your Ticket
             </h1>
             <p className="leading-relaxed text-xl text-gray-600 font-light">
@@ -71,7 +71,7 @@ const GetTicket = () => {
             </p>
             <p className="leading-relaxed text-lg text-gray-500 mt-6">
               Have questions? Reach us at:{" "}
-              <span className="text-red hover:text-black">
+              <span className="text-red-500 hover:text-black">
                 support@Smit.com
               </span>
             </p>
@@ -152,7 +152,7 @@ const GetTicket = () => {
               <div className="p-2 w-full">
                 <button
                   type="submit"
-                  className="flex mx-auto text-white bg-gradient-to-r from-red via-purple-800 to-red border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-full text-lg shadow-lg transition-transform duration-500 transform hover:scale-110 hover:shadow-2xl"
+                  className="flex mx-auto text-white bg-gradient-to-r from-red via-red-800 to-red border-0 py-2 px-8 focus:outline-none hover:bg-red-900 rounded-full text-lg shadow-lg transition-transform duration-500 transform hover:scale-110 hover:shadow-2xl"
                 >
                   Generate Ticket
                 </button>

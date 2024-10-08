@@ -244,7 +244,7 @@ function AppHero() {
     // {/* </div> */}
     // </BackgroundLines>
     <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
-      <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-r to-[white]  from-[#D04C54]  dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
+      <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-r to-[white]  from-[#D04C54] dark:from-[#D04C54] dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
         Saylani Tech Limited.
       </h2>
       <p className="max-w-xl mx-auto text-sm md:text-lg text-[#ffffffd2]  dark:text-neutral-400 text-center">
