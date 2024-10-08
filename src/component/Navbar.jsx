@@ -5,12 +5,15 @@ import "aos/dist/aos.css";
 import axios from "axios";
 import ShiftingDropDown from "./Dropdown";
 import { useDispatch } from "react-redux";
-import { setImgUrl } from "../redux/userSlice";
+import { setImgUrl, setTransparent } from "../redux/userSlice";
 
 const Navbar = () => {
   const location = useLocation();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isTransparent, setIsTransparent] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
   const [imageUrl, setImageUrl] = useState(
     "https://th.bing.com/th/id/OIP._z7zYMDurI56otX5togX6QAAAA?w=269&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
   );
@@ -57,13 +60,51 @@ const Navbar = () => {
     setMobileMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 600) {
+        setIsTransparent(false);
+        dispatch(setTransparent(false));
+      } else {
+        setIsTransparent(true);
+        dispatch(setTransparent(true));
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      if (currentScrollPos > prevScrollPos) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
-    <div className="sticky top-0 z-50 bg-white">
+    <div className={`fixed w-full top-0 z-50 ${isVisible ? "top-0" : "-top-[75px]"} ${isTransparent ? "bg-transparent" : "bg-white"} transition-all duration-500 border-b-[1px] border-[#bbbbbb42]`}>
       <header
         className="text-gray-400 body-font"
         data-aos="fade-down"
       >
-        <div className="container mx-auto flex flex-wrap p-5 items-center justify-between">
+        <div className="container mx-auto flex flex-wrap px-5 py-3 items-center justify-between">
           <div
             className="flex title-font font-medium items-center text-white"
             data-aos="fade-right"
@@ -106,7 +147,7 @@ const Navbar = () => {
             <Link
               to="/"
               className={`${location.pathname === "/" ? "text-white bg-red" : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+                } ${isTransparent ? "text-white" : "text-black"} mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
             >
               Home
@@ -114,7 +155,7 @@ const Navbar = () => {
             <Link
               to="/about"
               className={`${location.pathname === "/about" ? "text-white bg-red" : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+                } ${isTransparent ? "text-white" : "text-black"} mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -266,7 +307,7 @@ const Navbar = () => {
               className={`${location.pathname === "/contact"
                 ? "text-white bg-red"
                 : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+                } ${isTransparent ? "text-white" : "text-black"} mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -275,7 +316,7 @@ const Navbar = () => {
             <Link
               to="/team"
               className={`${location.pathname === "/team" ? "text-white bg-red" : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+                } ${isTransparent ? "text-white" : "text-black"} mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -286,7 +327,7 @@ const Navbar = () => {
               className={`${location.pathname === "/portfolio"
                 ? "text-white bg-red"
                 : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+                } ${isTransparent ? "text-white" : "text-black"} mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="500"
             >
@@ -297,21 +338,21 @@ const Navbar = () => {
               className={`${location.pathname === "/career"
                 ? "text-white bg-red"
                 : ""
-                } mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
+                } ${isTransparent ? "text-white" : "text-black"} mr-5 text-black px-3 py-2 rounded transition-all duration-300`}
               data-aos="fade-up"
               data-aos-delay="500"
             >
               Career
             </Link>
             <Link to="/contact">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-500 transform hover:scale-105 transition duration-300 ease-in-out">
+              <button className="bg-gradient-to-r bg-red text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-red/90 transform hover:scale-105 transition ease-in-out">
                 GET TICKET ➡
               </button>
             </Link>
           </nav>
         </div>
       </header>
-    </div>
+    </div >
   );
 };
 

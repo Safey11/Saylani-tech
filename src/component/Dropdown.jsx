@@ -63,12 +63,14 @@ const Tabs = () => {
 };
 
 const Tab = ({ children, tab, handleSetSelected, selected }) => {
+    const { transparent } = useSelector(state => state.user);
+    
     return (
         <button
             id={`shift-tab-${tab}`}
             onMouseEnter={() => handleSetSelected(tab)}
             onClick={() => handleSetSelected(tab)}
-            className={`flex items-center gap-1 rounded-full py-1.5 w-full justify-center md:px-3 text-md transition-colors text-black ${selected === tab
+            className={`flex items-center gap-1 rounded-full py-1.5 w-full justify-center md:px-3 text-md transition-colors text-black ${transparent ? "text-white" : "text-black"} ${selected === tab
                 ? ""
                 : ""
                 }`}
