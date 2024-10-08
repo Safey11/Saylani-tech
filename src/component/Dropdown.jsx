@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 
 const ShiftingDropDown = () => {
     return (
-        <div className="flex z-50 justify-start text-neutral-200 md:justify-center">
+        <div className="flex z-50 justify-start text-neutral-200 lg:justify-center">
             <Tabs />
         </div>
     );
@@ -63,15 +63,19 @@ const Tabs = () => {
 };
 
 const Tab = ({ children, tab, handleSetSelected, selected }) => {
+    const { transparent } = useSelector(state => state.user);
+
     return (
         <button
             id={`shift-tab-${tab}`}
             onMouseEnter={() => handleSetSelected(tab)}
             onClick={() => handleSetSelected(tab)}
-            className={`flex items-center gap-1 rounded-full py-1.5 w-full justify-center md:px-3 text-md transition-colors text-black ${selected === tab
+            className={`flex items-center gap-1 rounded-full py-1.5 w-full justify-center lg:px-3 text-md transition-colors text-white ${transparent ? "lg:text-white" : "lg:text-black"} ${selected === tab
                 ? ""
                 : ""
                 }`}
+            data-aos="fade-up"
+            data-aos-delay="200"
         >
             <span>{children}</span>
             <FiChevronDown
